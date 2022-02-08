@@ -1,0 +1,16 @@
+version: "3.0"
+
+services:
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    restart: on-failure
+    volumes:
+      - redis_data:/var/lib/redis/data
+
+
+
+volumes:
+  redis_data:
